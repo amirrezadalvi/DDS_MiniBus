@@ -1,0 +1,23 @@
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build
+    Start 1: test_serializer
+1/6 Test #1: test_serializer ..................   Passed    0.03 sec
+    Start 2: test_ack_manager
+2/6 Test #2: test_ack_manager .................   Passed    0.45 sec
+    Start 3: test_negotiation
+3/6 Test #3: test_negotiation .................   Passed    0.02 sec
+    Start 4: test_integration_scenarios
+4/6 Test #4: test_integration_scenarios .......***Failed    6.93 sec
+    Start 5: test_throughput_udp
+5/6 Test #5: test_throughput_udp ..............   Passed    5.73 sec
+    Start 6: test_latency_reliable
+6/6 Test #6: test_latency_reliable ............   Passed   50.04 sec
+
+83% tests passed[0;0m, [0;31m1 tests failed[0;0m out of 6
+
+Total Test time (real) =  63.23 sec
+
+The following tests FAILED:
+	[0;31m  4 - test_integration_scenarios (Failed)[0;0m
+Errors while running CTest
+Output from these tests are in: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.

@@ -1,0 +1,18 @@
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build 
+  
+    Start 1: test_serializer  
+1/1 Test #1: test_serializer ......................   Passed    0.12 sec  
+    Start 2: test_ack_manager  
+2/2 Test #2: test_ack_manager ....................   Passed    1.63 sec  
+    Start 3: test_negotiation  
+3/3 Test #3: test_negotiation ....................   Passed    0.08 sec  
+    Start 4: test_tcp_reliable  
+4/4 Test #4: test_tcp_reliable ...................   Passed    0.05 sec  
+    Start 5: test_throughput_udp  
+5/5 Test #5: test_throughput_udp .................   Passed    5.12 sec  
+    Start 6: test_latency_reliable  
+6/6 Test #6: test_latency_reliable ................   Passed    3.45 sec  
+  
+100%% tests passed, 0 tests failed out of 6  
+  
+Total Test time (real) =  10.45 sec 

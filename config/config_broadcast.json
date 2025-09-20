@@ -1,0 +1,55 @@
+﻿{
+    "node_id":  "dds-node-1",
+    "protocol_version":  "1.0",
+    "discovery":  {
+                      "enabled":  true,
+                      "mode":  "broadcast",
+                      "address":  "255.255.255.255",
+                      "port":  39001,
+                      "interval_ms":  1000,
+                      "ttl":  1
+                  },
+    "transport":  {
+                      "default":  "udp",
+                      "udp":  {
+                                  "port":  39010,
+                                  "rcvbuf":  262144,
+                                  "sndbuf":  262144
+                              },
+                      "tcp":  {
+                                  "listen":  true,
+                                  "port":  39020,
+                                  "rcvbuf":  262144,
+                                  "sndbuf":  262144,
+                                  "connect_timeout_ms":  1500,
+                                  "heartbeat_ms":  0,
+                                  "reconnect_backoff_ms":  500,
+                                  "max_reconnect_attempts":  10
+                              }
+                  },
+    "qos":  {
+                "default":  "reliable",
+                "reliable":  {
+                                 "ack_timeout_ms":  150,
+                                 "max_retries":  3,
+                                 "exponential_backoff":  true
+                             },
+                "dedup_capacity":  2048
+            },
+    "serialization":  {
+                          "format":  "json",
+                          "supported":  [
+                                            "json",
+                                            "cbor"
+                                        ],
+                          "allow_json_fallback":  true
+                      },
+    "topics":  [
+                   "sensor/temperature",
+                   "sensor/humidity"
+               ],
+    "logging":  {
+                    "level":  "info",
+                    "file":  ""
+                }
+}

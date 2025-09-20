@@ -1,0 +1,7 @@
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build
+    Start 10: test_latency_reliable
+1/1 Test #10: test_latency_reliable ............   Passed   50.04 sec
+
+[0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 1
+
+Total Test time (real) =  50.05 sec

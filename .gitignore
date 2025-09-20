@@ -1,0 +1,7 @@
+# DDS-MiniBus ignore rules
+build/
+build-tests/
+*.log
+.cmake/
+CMakeCache.txt
+compile_commands.json

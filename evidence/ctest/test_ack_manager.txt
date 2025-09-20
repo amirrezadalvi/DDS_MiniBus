@@ -1,0 +1,13 @@
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build
+    Start 2: test_ack_manager
+1/1 Test #2: test_ack_manager .................***Failed    0.37 sec
+
+0% tests passed[0;0m, [0;31m1 tests failed[0;0m out of 1
+
+Total Test time (real) =   0.38 sec
+
+The following tests FAILED:
+	[0;31m  2 - test_ack_manager (Failed)[0;0m
+Errors while running CTest
+Output from these tests are in: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.

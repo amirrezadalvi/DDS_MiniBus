@@ -1,0 +1,16 @@
+@startuml
+actor Publisher
+participant DDS
+participant Transport
+participant Subscriber
+participant QoS
+
+Publisher -> DDS: publish(topic, message, QoS=reliable)
+DDS -> QoS: track + set timeout
+QoS -> Transport: send(message, topic) to receiver
+Transport -> Subscriber: UDP/TCP packet
+Subscriber -> Transport: ACK(message_id)
+Transport -> QoS: receive ACK
+QoS -> DDS: ack_received()
+DDS -> Publisher: done
+@enduml
