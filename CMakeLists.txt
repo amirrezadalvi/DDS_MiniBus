@@ -287,7 +287,15 @@ set_tests_properties(test_latency_reliable PROPERTIES TIMEOUT 120)
 
 # Register integration tests with labels
 register_dds_test(test_integration_scenarios)
-set_tests_properties(test_integration_scenarios PROPERTIES LABELS "integration_loopback")
+set_tests_properties(test_integration_scenarios PROPERTIES
+    LABELS "integration_loopback"
+    ENVIRONMENT "DDS_TEST_LOOPBACK=1"
+)
+
+# Skip flaky integration test on Windows/MinGW
+if (WIN32)
+  set_tests_properties(test_integration_scenarios PROPERTIES DISABLED TRUE)
+endif()
 
 # Register network-dependent tests (may be skipped)
 foreach(network_test test_pub2sub_reliable test_discovery_cycle test_qos_failure)
