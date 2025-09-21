@@ -1,0 +1,38 @@
+@startuml
+actor NodeA
+actor NodeB
+participant "DiscoveryManager A" as DiscA
+participant "DiscoveryManager B" as DiscB
+participant "DDSCore A" as CoreA
+participant "DDSCore B" as CoreB
+
+== Discovery Phase ==
+NodeA -> DiscA: start(node_id, topics, formats)
+DiscA -> DiscA: bind socket, start timer
+DiscA ->> DiscA: send periodic announcements (UDP broadcast/multicast)
+
+NodeB -> DiscB: start(node_id, topics, formats)
+DiscB -> DiscB: bind socket, start timer
+DiscB ->> DiscB: send periodic announcements
+
+DiscA -> DiscB: receive announcement from B
+DiscB -> DiscA: receive announcement from A
+
+DiscA -> CoreA: peerUpdated(nodeB, topics, formats, port)
+CoreA -> CoreA: update routing table for topics
+
+DiscB -> CoreB: peerUpdated(nodeA, topics, formats, port)
+CoreB -> CoreB: update routing table for topics
+
+== Messaging Phase ==
+NodeA -> CoreA: publish(topic, payload, qos)
+CoreA -> CoreA: check routing (peers for topic)
+CoreA -> CoreB: send message envelope (via UDP/TCP)
+
+NodeB -> CoreB: receive message
+CoreB -> NodeB: deliver to subscriber callback
+
+NodeB -> CoreB: subscribe(topic)
+CoreB -> CoreB: register subscriber
+
+@enduml
