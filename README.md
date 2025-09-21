@@ -8,6 +8,14 @@ A minimal publish/subscribe bus in C++17 + Qt 6 (MinGW). Features:
 - Config-driven runtime
 - Tests via CTest/QtTest
 
+## Architecture / معماری
+- [Persian Documentation](docs/fa/Architecture.fa.md)
+- Diagrams:
+  - [Component Diagram](docs/diagrams/component.puml)
+  - [Reliable Publish Sequence](docs/diagrams/sequence_publish_reliable.puml)
+
+Diagrams are in PlantUML format. To view them, install the PlantUML extension in VS Code.
+
 ## Requirements (Windows)
 - Qt 6.9.2 (mingw_64)
 - MinGW 13.x (bundled with Qt Tools)

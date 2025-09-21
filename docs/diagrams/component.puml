@@ -1,22 +1,33 @@
 @startuml
 skinparam componentStyle rectangle
+skinparam monochrome true
+
 package "DDS Mini-Bus" {
-[DDS Core]
-[Publisher]
-[Subscriber]
-[Serializer]
-[Discovery Manager]
-[Ack Manager]
-[Transport: UDP/TCP]
-[Config Manager]
-[Logger]
+  [DDSCore]
+  [Publisher]
+  [Subscriber]
+  [Serializer]
+  [DiscoveryManager]
+  [ConfigManager]
+  [Logger]
+
+  package Transport {
+    [TransportBase]
+    [UdpTransport]
+    [TcpTransport]
+    [AckManager]
+  }
 }
-[Publisher] --> [DDS Core]
-[Subscriber] --> [DDS Core]
-[DDS Core] --> [Serializer]
-[DDS Core] --> [Discovery Manager]
-[DDS Core] --> [Ack Manager]
-[DDS Core] --> [Transport: UDP/TCP]
-[DDS Core] --> [Logger]
-[DDS Core] --> [Config Manager]
+
+[Publisher] --> [DDSCore]
+[Subscriber] --> [DDSCore]
+[DDSCore] --> [Serializer]
+[DDSCore] --> [DiscoveryManager]
+[DDSCore] --> [ConfigManager]
+[DDSCore] ..> [Logger]
+
+[DDSCore] --> [TransportBase]
+[TransportBase] <|-- [UdpTransport]
+[TransportBase] <|-- [TcpTransport]
+[UdpTransport] --> [AckManager]
 @enduml
