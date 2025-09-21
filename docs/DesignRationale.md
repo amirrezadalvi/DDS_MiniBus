@@ -1,63 +1,33 @@
-# Design Rationale
+# Design Rationale (چرایی تصمیم‌ها)
 
-This document explains key design decisions in DDS Mini-Bus, focusing on trade-offs, alternatives considered, and alignment with the current codebase.
+## Language & Framework (زبان و چارچوب)
+- **Choice:** C++17 + Qt Network  
+- **Why:** High performance, mature networking, cross-platform. (کارایی بالا، کتابخانه شبکه بالغ، چندسکویی)
 
-## Reliability via UDP + AckManager
+## Transport (لایه انتقال)
+- **Choice:** UDP (Best-Effort) + app-level Reliable via ACK; TCP available  
+- **Why:** UDP ساده و کم‌هزینه برای broadcast/discovery؛ Reliable با ACK قابل حمل روی UDP؛ TCP برای سناریوهای نیازمند اتصال.  
+- **Trade-off:** UDP نیازمند منطق ACK/Retry است. (UDP به منطق ACK/Retry نیاز دارد.)
 
-**Decision:** Use UDP as the primary transport with a custom AckManager for reliable QoS, rather than TCP.
+## Discovery (کشف نودها)
+- **Choice:** Broadcast/Multicast + Loopback برای ویندوز  
+- **Why:** ساده، بدون وابستگی به سرویس خارجی؛ Loopback برای محیط‌های محدود/فایروال ویندوز.  
+- **Configurable:** از طریق `config/*.json` و متغیر محیطی `DDS_TEST_LOOPBACK`.
 
-**Rationale:**
-- UDP allows efficient broadcast/multicast for discovery, avoiding TCP's connection overhead.
-- AckManager provides fine-grained reliability control (ACK/retry with exponential backoff) without TCP's head-of-line blocking.
-- Suitable for real-time pub/sub where some message loss is tolerable but guaranteed delivery is needed for critical data.
+## Message Format (فرمت پیام)
+- **Choice:** JSON + CBOR  
+- **Why:** خوانایی/دیباگ آسان (JSON) و کارایی بهتر (CBOR). Negotiation فرمت در زمان اتصال.
 
-**Alternatives Considered:**
-- Pure TCP: Simpler but lacks efficient multicast; connection-oriented nature complicates peer discovery.
-- Reliable multicast protocols (e.g., PGM): Not widely supported in Qt/C++ standard libraries; adds complexity.
+## QoS
+- **Levels:** Best-Effort, Reliable(ACK/Retry/Timeout)  
+- **Defaults:** مقادیر پیش‌فرض در config و امکان تنظیم.  
 
-## JSON/CBOR Serialization with Negotiation
+## Testing Strategy (استراتژی تست)
+- **Unit/Perf Tests:** serializer, negotiation, ack, latency/throughput.  
+- **Integration:** pub2sub, discovery, qos_failure.  
+- **Windows Note:** تست «integration_scenarios» تک‌پردازه‌ای روی MinGW ناپایدار است → **Disabled** با گزینه override برای CI. این تصمیم مستند و مطابق محیط ویندوز است.
 
-**Decision:** Support both JSON and CBOR with runtime format negotiation, preferring JSON.
+## Risks & Mitigations (ریسک‌ها و پوشش‌ها)
+- Multicast محدود در ویندوز → Loopback و Skip کنترل‌شده.  
+- وابستگی به Qt DLL در تست‌ها → اجرای CTest از `qt_deploy` و وین‌دیپلوی.
 
-**Rationale:**
-- JSON is human-readable for debugging and interoperability.
-- CBOR is compact for bandwidth-constrained environments.
-- Negotiation ensures compatibility between peers with different preferences.
-- Qt provides native support for both formats.
-
-**Alternatives Considered:**
-- Single format (JSON only): Limits efficiency; CBOR-only reduces readability.
-- Protocol Buffers: Adds external dependency; overkill for this lightweight bus.
-
-## Discovery Modes Including Loopback
-
-**Decision:** Support broadcast, multicast, and loopback modes for discovery.
-
-**Rationale:**
-- Broadcast/multicast enable network-wide discovery.
-- Loopback mode (`DDS_TEST_LOOPBACK=1`) allows local testing without network dependencies, crucial for Windows/MinGW where single-process tests are unstable.
-
-**Alternatives Considered:**
-- Centralized discovery service: Adds single point of failure; increases complexity.
-- mDNS/Zeroconf: Platform-dependent; Qt lacks built-in support.
-
-## Disabling Single-Process Integration Test on Windows
-
-**Decision:** Disable `test_integration_scenarios` by default on Windows/MinGW due to Qt event-loop limitations.
-
-**Rationale:**
-- Qt's event loop can be unstable when multiple QCoreApplications run in the same process on Windows.
-- E2E behavior is validated via multi-process demos (PowerShell scripts).
-- Prevents flaky tests while ensuring functionality.
-
-**Alternatives Considered:**
-- Force-enable with environment variable: Allows opt-in for advanced users.
-- Rewrite tests to avoid multiple event loops: Time-consuming; multi-process approach is more robust.
-
-## Future Work
-
-- Add TLS support for secure transports.
-- Implement topic wildcards or hierarchies.
-- Extend QoS policies (e.g., priority, durability).
-- Add metrics/monitoring endpoints.
-- Support for larger deployments with hierarchical discovery.
