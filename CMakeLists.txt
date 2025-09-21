@@ -292,10 +292,31 @@ set_tests_properties(test_integration_scenarios PROPERTIES
     ENVIRONMENT "DDS_TEST_LOOPBACK=1"
 )
 
-# Skip flaky integration test on Windows/MinGW
-if (WIN32)
-  set_tests_properties(test_integration_scenarios PROPERTIES DISABLED TRUE)
+# ---- BEGIN: Windows test policy ----
+# Disable flaky single-process integration test on Windows/MinGW by default.
+# This matches our README and still allows an explicit override for CI/dev.
+if (WIN32 AND (CMAKE_GENERATOR MATCHES "MinGW" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
+  set_tests_properties(test_integration_scenarios PROPERTIES
+    DISABLED TRUE
+    LABELS "integration_single_process_win_flaky"
+  )
 endif()
+
+# Optional override: set FORCE_ENABLE_INTEGRATION_TESTS=1 to force-run it anywhere.
+if(DEFINED ENV{FORCE_ENABLE_INTEGRATION_TESTS} AND "$ENV{FORCE_ENABLE_INTEGRATION_TESTS}" STREQUAL "1")
+  set_tests_properties(test_integration_scenarios PROPERTIES DISABLED FALSE)
+endif()
+
+# Give the latency test a larger timeout on Windows.
+set_tests_properties(test_latency_reliable PROPERTIES TIMEOUT 120)
+
+# Convenience target to copy default configs into build & qt_deploy.
+add_custom_target(qt_deploy_copy_configs
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/config/config_broadcast.json ${CMAKE_BINARY_DIR}/config/config.json
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/config/config_broadcast.json ${CMAKE_BINARY_DIR}/qt_deploy/config/config.json
+  DEPENDS copy_test_configs
+)
+# ---- END: Windows test policy ----
 
 # Register network-dependent tests (may be skipped)
 foreach(network_test test_pub2sub_reliable test_discovery_cycle test_qos_failure)

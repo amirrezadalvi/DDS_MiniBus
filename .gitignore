@@ -1,7 +1,31 @@
-# DDS-MiniBus ignore rules
-build/
-build-tests/
+# Build artifacts
+/build/
+/cmake-build-*/
+*/CMakeFiles/
+/CMakeCache.txt
+/Testing/
+*.a
+*.lib
+*.dll
+*.exp
+*.pdb
+*.obj
+*.o
+*.exe
+*.ilk
 *.log
-.cmake/
-CMakeCache.txt
-compile_commands.json
+
+# IDE/Qt/VSCode
+*.user
+*.pro.user
+*.qmake.stash
+/.vs/
+/.vscode/
+/.idea/
+
+# Deployed runtime
+/build/qt_deploy/
+
+# OS
+.DS_Store
+Thumbs.db
