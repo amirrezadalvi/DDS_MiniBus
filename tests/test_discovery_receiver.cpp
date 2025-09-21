@@ -45,8 +45,8 @@ int main(int argc, char** argv) {
     const QString      modeStr  = cfg.disc.mode;     // "multicast" یا "broadcast"
     const QHostAddress mcastAdr = cfg.disc.address;  // 239.255.0.1
     qInfo() << "[DISC][RX]" << "mode=" << modeStr
-            << "grp=" << mcastAdr.toString()
-            << "discPort=" << discPort;
+             << "grp=" << mcastAdr.toString()
+             << "discPort=" << discPort;
 
     DiscoveryManager disc(cfg.node_id + "-rx", discPort);
     disc.setProtocolVersion(cfg.protocol_version);
@@ -56,8 +56,19 @@ int main(int argc, char** argv) {
     }
     disc.setDataPort(t->boundPort());
     disc.setAdvertisedTopics(cfg.topics_list.isEmpty() ? QStringList{"sensor/temperature"} : cfg.topics_list);
+
+    // Enable loopback mode for testing if environment variable is set
+    bool loopbackMode = qEnvironmentVariableIntValue("DDS_TEST_LOOPBACK") == 1;
+    if (loopbackMode) {
+        disc.setLoopbackMode(true);
+        qInfo() << "test: discovery loopback mode enabled";
+    }
+
     QObject::connect(&disc, &DiscoveryManager::peerUpdated, &core, &DDSCore::updatePeers);
     disc.start(/*immediate*/ true);
+
+    // Timeout after 10 seconds to avoid hanging
+    QTimer::singleShot(10000, &app, &QCoreApplication::quit);
 
     // --- Subscriber نمونه
     core.makeSubscriber("sensor/temperature", [](const QJsonObject& pl){

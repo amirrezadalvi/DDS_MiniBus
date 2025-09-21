@@ -67,8 +67,8 @@ int main(int argc, char** argv) {
     const QString      modeStr  = cfg.disc.mode;
     const QHostAddress mcastAdr = cfg.disc.address;
     qInfo() << "[DISC][TX]" << "mode=" << modeStr
-            << "grp=" << mcastAdr.toString()
-            << "discPort=" << discPort;
+             << "grp=" << mcastAdr.toString()
+             << "discPort=" << discPort;
 
     DiscoveryManager disc(cfg.node_id + "-tx", discPort);
     disc.setProtocolVersion(cfg.protocol_version);
@@ -78,8 +78,19 @@ int main(int argc, char** argv) {
     }
     disc.setDataPort(t->boundPort());
     disc.setAdvertisedTopics(cfg.topics_list.isEmpty() ? QStringList{"sensor/temperature"} : cfg.topics_list);
+
+    // Enable loopback mode for testing if environment variable is set
+    bool loopbackMode = qEnvironmentVariableIntValue("DDS_TEST_LOOPBACK") == 1;
+    if (loopbackMode) {
+        disc.setLoopbackMode(true);
+        qInfo() << "test: discovery loopback mode enabled";
+    }
+
     QObject::connect(&disc, &DiscoveryManager::peerUpdated, &core, &DDSCore::updatePeers);
     disc.start(/*immediate*/ true);
+
+    // Timeout after 10 seconds to avoid hanging
+    QTimer::singleShot(10000, &app, &QCoreApplication::quit);
 
     // --- Publisher ---
     auto pub = core.makePublisher("sensor/temperature");
