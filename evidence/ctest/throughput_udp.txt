@@ -1,0 +1,7 @@
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build
+    Start 9: test_throughput_udp
+1/1 Test #9: test_throughput_udp ..............   Passed    4.59 sec
+
+[0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 1
+
+Total Test time (real) =   4.61 sec

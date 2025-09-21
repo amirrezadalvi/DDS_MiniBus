@@ -1,0 +1,20 @@
+@startuml
+actor App
+participant "Publisher" as Pub
+participant "DDS Core" as Core
+participant "Serializer" as Ser
+participant "Transport (UDP)" as Udp
+participant "Ack Manager" as Ack
+participant "Subscriber" as Sub
+
+App -> Pub: publish(topic, payload, qos=reliable)
+Pub -> Core: publish(...)
+Core -> Ser: encode(JSON/CBOR)
+Ser --> Core: bytes
+Core -> Udp: send(bytes, peer)
+Udp -> Sub: datagram
+Sub -> Core: ack()
+Core -> Ack: notify ACK
+Ack --> Core: done (no retry)
+Core -> App: publish() success
+@enduml

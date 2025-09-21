@@ -1,0 +1,24 @@
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build
+      Start  1: test_serializer
+ 1/12 Test  #1: test_serializer ..................   Passed    0.16 sec
+      Start  2: test_ack_manager
+ 2/12 Test  #2: test_ack_manager .................***Failed    0.44 sec
+      Start  3: test_negotiation
+ 3/12 Test  #3: test_negotiation .................   Passed    0.05 sec
+      Start  4: test_integration_scenarios
+ 4/12 Test  #4: test_integration_scenarios .......***Failed    6.97 sec
+      Start  5: test_tcp_reliable
+ 5/12 Test  #5: test_tcp_reliable ................   Passed    3.09 sec
+      Start  6: test_pub2sub_reliable
+ 6/12 Test  #6: test_pub2sub_reliable ............***Failed    2.64 sec
+      Start  7: test_discovery_cycle
+ 7/12 Test  #7: test_discovery_cycle .............***Failed    2.57 sec
+      Start  8: test_qos_failure
+ 8/12 Test  #8: test_qos_failure .................***Failed    1.52 sec
+      Start  9: test_throughput_udp
+ 9/12 Test  #9: test_throughput_udp ..............   Passed    2.50 sec
+      Start 10: test_latency_reliable
+10/12 Test #10: test_latency_reliable ............   Passed   50.08 sec
+      Start 11: test_discovery_rx
+11/12 Test #11: test_discovery_rx ................***Timeout 120.01 sec
+      Start 12: test_discovery_tx

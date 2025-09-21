@@ -1,0 +1,33 @@
+{
+  "node_id": "node-rx",
+  "protocol_version": "1.0",
+  "discovery": {
+    "enabled": true,
+    "mode": "multicast",
+    "address": "239.255.0.1",
+    "port": 45454,
+    "interval_ms": 800
+  },
+  "transport": {
+    "default": "tcp",
+    "udp": {
+      "port": 38020,
+      "rcvbuf": 262144,
+      "sndbuf": 262144
+    },
+    "tcp": {
+      "listen": true,
+      "port": 38030,
+      "connect": ["127.0.0.1:38030"],
+      "rcvbuf": 262144,
+      "sndbuf": 262144,
+      "connect_timeout_ms": 1500,
+      "heartbeat_ms": 0,
+      "reconnect_backoff_ms": 500
+    }
+  },
+  "qos": { "default": "reliable",
+           "reliable": { "ack_timeout_ms": 200, "max_retries": 3, "exponential_backoff": true } },
+  "topics": ["sensor/temperature", "sensor/humidity"],
+  "logging": { "level": "debug", "file": "logs/dds.log" }
+}

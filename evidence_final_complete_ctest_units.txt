@@ -1,0 +1,102 @@
+UpdateCTestConfiguration  from :C:/Users/Nova/Desktop/DDS-MiniBus-1/build/DartConfiguration.tcl
+Parse Config file:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/DartConfiguration.tcl
+Test project C:/Users/Nova/Desktop/DDS-MiniBus-1/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start  1: test_serializer
+
+1: Test command: C:\Users\Nova\Desktop\DDS-MiniBus-1\build\test_serializer.exe
+1: Working Directory: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+1: Environment variable modifications: 
+1:  PATH=path_list_prepend:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+1:  
+         PATH=path_list_prepend:C:/Qt/6.9.2/mingw_64/bin
+1:  
+         PATH=path_list_prepend:C:/Qt/Tools/mingw1310_64/bin
+1: Test timeout computed to be: 1500
+1/6 Test  #1: test_serializer ..................   Passed    0.04 sec
+test 2
+    Start  2: test_ack_manager
+
+2: Test command: C:\Users\Nova\Desktop\DDS-MiniBus-1\build\test_ack_manager.exe
+2: Working Directory: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+2: Environment variable modifications: 
+2:  PATH=path_list_prepend:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+2:  
+         PATH=path_list_prepend:C:/Qt/6.9.2/mingw_64/bin
+2:  
+         PATH=path_list_prepend:C:/Qt/Tools/mingw1310_64/bin
+2: Test timeout computed to be: 1500
+2/6 Test  #2: test_ack_manager .................   Passed    1.47 sec
+test 3
+    Start  3: test_negotiation
+
+3: Test command: C:\Users\Nova\Desktop\DDS-MiniBus-1\build\test_negotiation.exe
+3: Working Directory: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+3: Environment variable modifications: 
+3:  PATH=path_list_prepend:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+3:  
+         PATH=path_list_prepend:C:/Qt/6.9.2/mingw_64/bin
+3:  
+         PATH=path_list_prepend:C:/Qt/Tools/mingw1310_64/bin
+3: Test timeout computed to be: 1500
+3/6 Test  #3: test_negotiation .................   Passed    0.03 sec
+test 5
+    Start  5: test_tcp_reliable
+
+5: Test command: C:\Users\Nova\Desktop\DDS-MiniBus-1\build\test_tcp_reliable.exe
+5: Working Directory: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+5: Environment variable modifications: 
+5:  PATH=path_list_prepend:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+5:  
+         PATH=path_list_prepend:C:/Qt/6.9.2/mingw_64/bin
+5:  
+         PATH=path_list_prepend:C:/Qt/Tools/mingw1310_64/bin
+5: Test timeout computed to be: 30
+4/6 Test  #5: test_tcp_reliable ................   Passed    3.09 sec
+test 9
+    Start  9: test_throughput_udp
+
+9: Test command: C:\Users\Nova\Desktop\DDS-MiniBus-1\build\test_throughput_udp.exe
+9: Working Directory: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+9: Environment variable modifications: 
+9:  PATH=path_list_prepend:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+9:  
+         PATH=path_list_prepend:C:/Qt/6.9.2/mingw_64/bin
+9:  
+         PATH=path_list_prepend:C:/Qt/Tools/mingw1310_64/bin
+9: Test timeout computed to be: 1500
+5/6 Test  #9: test_throughput_udp ..............   Passed    2.44 sec
+test 10
+    Start 10: test_latency_reliable
+
+10: Test command: C:\Users\Nova\Desktop\DDS-MiniBus-1\build\test_latency_reliable.exe
+10: Working Directory: C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+10: Environment variable modifications: 
+10:  PATH=path_list_prepend:C:/Users/Nova/Desktop/DDS-MiniBus-1/build/qt_deploy
+10:  
+         PATH=path_list_prepend:C:/Qt/6.9.2/mingw_64/bin
+10:  
+         PATH=path_list_prepend:C:/Qt/Tools/mingw1310_64/bin
+10: Test timeout computed to be: 1500
+6/6 Test #10: test_latency_reliable ............   Passed   50.10 sec
+
+The following tests passed:
+	test_serializer
+	test_ack_manager
+	test_negotiation
+	test_tcp_reliable
+	test_throughput_udp
+	test_latency_reliable
+
+100% tests passed, 0 tests failed out of 6
+
+Label Time Summary:
+network    =   3.09 sec*proc (1 test)
+
+Total Test time (real) =  57.19 sec
