@@ -211,7 +211,7 @@ private slots:
         qDebug() << "Child program:" << rxProcess.program() << "WD:" << rxProcess.workingDirectory() << "Exists:" << QFileInfo(rxProcess.program()).exists();
 
         int messagesReceived = 0;
-        QRegularExpression rxRegex("^\\[TEST\\]\\[RX\\] perf/topic:");
+        QRegularExpression rxRegex("^\\[TEST\\]\\[RX\\] sensor/temperature:");
 
         QObject::connect(&rxProcess, &QProcess::readyReadStandardOutput, [&]() {
             QByteArray output = rxProcess.readAllStandardOutput();
@@ -243,7 +243,7 @@ private slots:
                 {"data", QString("msg-%1").arg(i)},
                 {"timestamp", QDateTime::currentMSecsSinceEpoch()}
             };
-            core.publishInternal("perf/topic", payload, "best_effort");
+            core.publishInternal("sensor/temperature", payload, "best_effort");
             QTest::qWait(1); // Small delay between messages
         }
 
