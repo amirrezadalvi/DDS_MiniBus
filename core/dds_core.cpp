@@ -1,6 +1,6 @@
 #include "dds_core.h"
 #include "publisher.h"
-#include "include/qos.h"
+#include "qos.h"
 #include "transport/ack_manager.h"
 #include "config/config_manager.h"
 #include <QDateTime>
@@ -80,7 +80,7 @@ class Subscriber DDSCore::makeSubscriber(const QString& topic, Subscriber::Callb
 qint64 DDSCore::publishInternal(const QString& topic, const QJsonObject& payload, const QString& qos) {
     MessageEnvelope m; m.topic=topic; m.payload=payload; m.qos=qos; m.publisher_id=node_id;
     m.message_id = next_msg_id++; m.timestamp = QDateTime::currentSecsSinceEpoch();
-    const bool reliable = mbus::isReliable(qos);
+    const bool reliable = isReliable(qos);
     sendMessage(m, reliable); lastMsg.insert(topic, payload);
     if (ConfigManager::ref().qos_cfg.retain_last) {
         last_by_topic_[topic] = m;
