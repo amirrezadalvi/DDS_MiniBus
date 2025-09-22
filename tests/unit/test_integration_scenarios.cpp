@@ -212,8 +212,8 @@ private slots:
 
         int messagesReceived = 0;
         bool childReady = false;
-        QRegularExpression rxRegex("^\\[TEST\\]\\[RX\\] temperature:");
-        QRegularExpression readyRegex("^\\[TEST\\]\\[READY\\]");
+        QRegularExpression rxRegex("\\[TEST\\]\\[RX\\] temperature:");
+        QRegularExpression readyRegex("\\[TEST\\]\\[READY\\]");
 
         auto processOutput = [&](const QByteArray& output) {
             QString str = QString::fromUtf8(output);
