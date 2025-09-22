@@ -192,42 +192,28 @@ private slots:
 
     // Scenario 9.4: Simple load/latency measurement harness
     void testLoadLatencyMeasurement() {
-#if defined(_WIN32)
-        // On Windows/MinGW, UDP broadcast doesn't loop back in single-process.
-        // Use unicast pairing instead: two in-process nodes communicating via localhost.
-
+#if defined(Q_OS_WIN)
+        // On Windows, force loopback mode to make broadcast work in single-process
         qputenv("DDS_TEST_LOOPBACK", "1");
 
-        UdpTransport* transportSub = new UdpTransport(0, this); // ephemeral port
-        UdpTransport* transportPub = new UdpTransport(38025, this);
+        UdpTransport* transport = new UdpTransport(38025, this);
         AckManager* ackMgr = new AckManager(this);
-
-        DDSCore coreSub("perf-sub", "1.0", transportSub, nullptr);
-        DDSCore corePub("perf-pub", "1.0", transportPub, ackMgr);
+        DDSCore core("perf-node", "1.0", transport, ackMgr);
 
         const int NUM_MESSAGES = 100;
         QVector<qint64> latencies;
         int messagesReceived = 0;
 
         // Setup subscriber with latency measurement
-        coreSub.makeSubscriber("perf/topic", [&](const QJsonObject& payload) {
+        core.makeSubscriber("perf/topic", [&](const QJsonObject& payload) {
             qint64 sentTime = payload.value("timestamp").toVariant().toLongLong();
             qint64 receivedTime = QDateTime::currentMSecsSinceEpoch();
             latencies.append(receivedTime - sentTime);
             messagesReceived++;
         });
 
-        // Inject unicast peer: corePub -> coreSub on localhost:subPort
-        quint16 subPort = transportSub->boundPort();
-        QJsonObject peer;
-        peer["node_id"] = "perf-sub";
-        peer["data_port"] = subPort;
-        peer["topics"] = QJsonArray{"perf/topic"};
-        corePub.updatePeers("perf-sub", peer);
-
-        // Give event loop a moment
+        // Give the subscriber a moment to register
         QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
-        QTest::qWait(100);
 
         // Send messages
         for (int i = 0; i < NUM_MESSAGES; ++i) {
@@ -235,17 +221,16 @@ private slots:
                 {"data", QString("msg-%1").arg(i)},
                 {"timestamp", QDateTime::currentMSecsSinceEpoch()}
             };
-            corePub.publishInternal("perf/topic", payload, "best_effort");
+            core.publishInternal("perf/topic", payload, "best_effort");
             QTest::qWait(1); // Small delay between messages
         }
 
-        // Wait for all messages to be processed
-        QTRY_VERIFY_WITH_TIMEOUT(messagesReceived > 0, 3000);
+        // Wait for messages to be received
+        QTRY_VERIFY_WITH_TIMEOUT(messagesReceived > 0, 2500);
 
-        qInfo() << "Sent" << NUM_MESSAGES << "messages, received" << messagesReceived;
+        qInfo() << "LoadLatency: sent" << NUM_MESSAGES << "received" << messagesReceived;
 
-        delete transportSub;
-        delete transportPub;
+        delete transport;
         delete ackMgr;
 #else
         // Non-Windows: original broadcast-based logic
