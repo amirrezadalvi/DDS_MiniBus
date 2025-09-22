@@ -296,8 +296,9 @@ private slots:
 
         delete transport;
         delete ackMgr;
+// ------- end Windows branch -------
 #else
-        // Non-Windows: original broadcast-based logic
+// ------- Non-Windows branch: keep original in-process latency measurement -------
         UdpTransport* transport = new UdpTransport(38024, this);
         AckManager* ackMgr = new AckManager(this);
         DDSCore core("perf-node", "1.0", transport, ackMgr);
@@ -333,14 +334,8 @@ private slots:
         // Wait for all messages to be processed
         QTest::qWait(200);
 
-        delete transport;
-        delete ackMgr;
-#endif
-
-        // Calculate statistics (common for both paths)
+        // Calculate statistics
         QVERIFY(messagesReceived > 0);
-        qDebug() << "Load test results:" << messagesReceived << "messages received";
-#if !defined(Q_OS_WIN)
         qint64 totalLatency = 0;
         qint64 minLatency = INT64_MAX;
         qint64 maxLatency = 0;
@@ -353,6 +348,7 @@ private slots:
 
         double avgLatency = static_cast<double>(totalLatency) / latencies.size();
 
+        qDebug() << "Load test results:" << messagesReceived << "messages received";
         qDebug() << "Average latency:" << avgLatency << "ms";
         qDebug() << "Min latency:" << minLatency << "ms";
         qDebug() << "Max latency:" << maxLatency << "ms";
@@ -361,6 +357,9 @@ private slots:
         QVERIFY(avgLatency >= 0);
         QVERIFY(minLatency >= 0);
         QVERIFY(maxLatency >= minLatency);
+
+        delete transport;
+        delete ackMgr;
 #endif
     }
 
