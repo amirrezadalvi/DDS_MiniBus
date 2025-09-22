@@ -279,11 +279,11 @@ configure_file(
 function(dds_add_test NAME)
   # Additional args go to the test binary command line
   add_test(NAME ${NAME}
-    COMMAND $<TARGET_FILE:${NAME}> ${ARGN}
+    COMMAND "${CMAKE_BINARY_DIR}/qt_deploy/${NAME}.exe" ${ARGN}
   )
-  # Run from build dir so exe is there; qt_deploy is in PATH for DLLs
+  # Run from qt_deploy dir where Qt DLLs and plugins are
   set_tests_properties(${NAME} PROPERTIES
-    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
+    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/qt_deploy"
   )
   # Prepend qt_deploy to PATH (so DLLs resolve)
   set_property(TEST ${NAME} APPEND PROPERTY ENVIRONMENT
@@ -372,7 +372,7 @@ if (WIN32)
   if (WINDEPLOYQT_EXE)
     add_custom_command(TARGET dds_mini_bus POST_BUILD
       COMMAND "${WINDEPLOYQT_EXE}" "$<TARGET_FILE:dds_mini_bus>"
-              --debug --compiler-runtime --network --no-translations
+              --$<LOWER_CASE:$<CONFIG>> --compiler-runtime --network --no-translations
               --dir "${DEPLOY_DIR}"
       COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:dds_mini_bus>" "${DEPLOY_DIR}/"
       COMMENT "Deploying Qt runtime for dds_mini_bus.exe"
