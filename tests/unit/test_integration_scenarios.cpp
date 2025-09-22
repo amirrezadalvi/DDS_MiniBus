@@ -192,6 +192,58 @@ private slots:
 
     // Scenario 9.4: Simple load/latency measurement harness
     void testLoadLatencyMeasurement() {
+#if defined(_WIN32)
+        // On Windows/MinGW, UDP broadcast doesn't loop back in single-process.
+        // Use unicast pairing instead: two in-process nodes communicating via localhost.
+
+        UdpTransport* transportSub = new UdpTransport(38024, this);
+        UdpTransport* transportPub = new UdpTransport(38025, this);
+        AckManager* ackMgr = new AckManager(this);
+
+        DDSCore coreSub("perf-sub", "1.0", transportSub, nullptr);
+        DDSCore corePub("perf-pub", "1.0", transportPub, ackMgr);
+
+        const int NUM_MESSAGES = 100;
+        QVector<qint64> latencies;
+        int messagesReceived = 0;
+
+        // Setup subscriber with latency measurement
+        coreSub.makeSubscriber("perf/topic", [&](const QJsonObject& payload) {
+            qint64 sentTime = payload.value("timestamp").toVariant().toLongLong();
+            qint64 receivedTime = QDateTime::currentMSecsSinceEpoch();
+            latencies.append(receivedTime - sentTime);
+            messagesReceived++;
+        });
+
+        // Inject unicast peer: corePub -> coreSub on localhost:38024
+        QJsonObject peer;
+        peer["node_id"] = "perf-sub";
+        peer["data_port"] = 38024;
+        peer["topics"] = QJsonArray{"perf/topic"};
+        corePub.updatePeers("perf-sub", peer);
+
+        // Give event loop a moment
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
+        QTest::qWait(100);
+
+        // Send messages
+        for (int i = 0; i < NUM_MESSAGES; ++i) {
+            QJsonObject payload{
+                {"data", QString("msg-%1").arg(i)},
+                {"timestamp", QDateTime::currentMSecsSinceEpoch()}
+            };
+            corePub.publishInternal("perf/topic", payload, "best_effort");
+            QTest::qWait(1); // Small delay between messages
+        }
+
+        // Wait for all messages to be processed
+        QTest::qWait(200);
+
+        delete transportSub;
+        delete transportPub;
+        delete ackMgr;
+#else
+        // Non-Windows: original broadcast-based logic
         UdpTransport* transport = new UdpTransport(38024, this);
         AckManager* ackMgr = new AckManager(this);
         DDSCore core("perf-node", "1.0", transport, ackMgr);
@@ -227,7 +279,11 @@ private slots:
         // Wait for all messages to be processed
         QTest::qWait(200);
 
-        // Calculate statistics
+        delete transport;
+        delete ackMgr;
+#endif
+
+        // Calculate statistics (common for both paths)
         QVERIFY(messagesReceived > 0);
         qint64 totalLatency = 0;
         qint64 minLatency = INT64_MAX;
@@ -250,9 +306,6 @@ private slots:
         QVERIFY(avgLatency >= 0);
         QVERIFY(minLatency >= 0);
         QVERIFY(maxLatency >= minLatency);
-
-        delete transport;
-        delete ackMgr;
     }
 
     // Test graceful shutdown with pending messages
