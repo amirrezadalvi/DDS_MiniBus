@@ -199,12 +199,14 @@ private slots:
         QProcess rxProcess;
         rxProcess.setProgram("test_discovery_rx.exe");
         rxProcess.setArguments({"--config", "config/config.json"});
-        rxProcess.setWorkingDirectory(QDir::currentPath() + "/qt_deploy");
+        rxProcess.setWorkingDirectory(QDir::currentPath());
         rxProcess.setProcessEnvironment(QProcessEnvironment::systemEnvironment());
         auto env = rxProcess.processEnvironment();
         env.insert("PATH", QDir::currentPath() + "/qt_deploy;" + env.value("PATH"));
         env.insert("QT_LOGGING_RULES", "dds.disc=true;dds.net=true");
         rxProcess.setProcessEnvironment(env);
+
+        qDebug() << "Child program:" << rxProcess.program() << "WD:" << rxProcess.workingDirectory() << "Exists:" << QFileInfo(rxProcess.program()).exists();
 
         int messagesReceived = 0;
         QRegularExpression rxRegex("^\\[TEST\\]\\[RX\\] perf/topic:");
@@ -221,7 +223,7 @@ private slots:
         });
 
         rxProcess.start();
-        QVERIFY(rxProcess.waitForStarted(5000));
+        QVERIFY2(rxProcess.waitForStarted(5000), qPrintable(QString("Failed to start RX: %1").arg(rxProcess.errorString())));
 
         // Give RX time to start and subscribe
         QTest::qWait(2000);
