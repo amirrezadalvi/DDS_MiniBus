@@ -211,24 +211,34 @@ private slots:
         qDebug() << "Child program:" << rxProcess.program() << "WD:" << rxProcess.workingDirectory() << "Exists:" << QFileInfo(rxProcess.program()).exists();
 
         int messagesReceived = 0;
-        QRegularExpression rxRegex("^\\[TEST\\]\\[RX\\] sensor/temperature:");
+        bool childReady = false;
+        QRegularExpression rxRegex("^\\[TEST\\]\\[RX\\] temperature:");
+        QRegularExpression readyRegex("^\\[TEST\\]\\[READY\\]");
 
-        QObject::connect(&rxProcess, &QProcess::readyReadStandardOutput, [&]() {
-            QByteArray output = rxProcess.readAllStandardOutput();
+        auto processOutput = [&](const QByteArray& output) {
             QString str = QString::fromUtf8(output);
             QStringList lines = str.split('\n', Qt::SkipEmptyParts);
             for (const QString& line : lines) {
-                if (rxRegex.match(line).hasMatch()) {
+                if (readyRegex.match(line).hasMatch()) {
+                    childReady = true;
+                } else if (rxRegex.match(line).hasMatch()) {
                     messagesReceived++;
                 }
             }
+        };
+
+        QObject::connect(&rxProcess, &QProcess::readyReadStandardOutput, [&]() {
+            processOutput(rxProcess.readAllStandardOutput());
+        });
+        QObject::connect(&rxProcess, &QProcess::readyReadStandardError, [&]() {
+            processOutput(rxProcess.readAllStandardError());
         });
 
         rxProcess.start();
         QVERIFY2(rxProcess.waitForStarted(15000), qPrintable(QString("Failed to start RX: %1").arg(rxProcess.errorString())));
 
-        // Give RX time to start and subscribe
-        QTest::qWait(2000);
+        // Wait for child to signal readiness
+        QTRY_VERIFY_WITH_TIMEOUT(childReady, 10000);
 
         // Publisher setup
         UdpTransport* transport = new UdpTransport(38025, this);

@@ -80,5 +80,8 @@ int main(int argc, char** argv) {
         qInfo() << "[TEST][RX] perf/topic:" << pl;
     });
 
+    // Signal readiness after subscribing
+    qInfo() << "[TEST][READY]";
+
     return app.exec();
 }
