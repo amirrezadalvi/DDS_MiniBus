@@ -235,6 +235,13 @@ private slots:
         AckManager* ackMgr = new AckManager(this);
         DDSCore core("perf-node", "1.0", transport, ackMgr);
 
+        // Inject peer for unicast to child
+        QJsonObject peer;
+        peer["node_id"] = "dds-node-1"; // from config
+        peer["data_port"] = 39010; // from config
+        peer["topics"] = QJsonArray{"sensor/temperature"};
+        core.updatePeers("dds-node-1", peer);
+
         const int NUM_MESSAGES = 100;
 
         // Send messages
