@@ -199,7 +199,7 @@ private slots:
         QProcess rxProcess;
         rxProcess.setProgram("test_discovery_rx.exe");
         rxProcess.setArguments({"--config", "config/config.json"});
-        rxProcess.setWorkingDirectory(QDir::currentPath() + "/qt_deploy");
+        rxProcess.setWorkingDirectory(QDir::currentPath());
         rxProcess.setProcessEnvironment(QProcessEnvironment::systemEnvironment());
         auto env = rxProcess.processEnvironment();
         env.insert("PATH", QDir::currentPath() + "/qt_deploy;" + env.value("PATH"));
