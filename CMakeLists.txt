@@ -376,20 +376,27 @@ if (WIN32)
     )
 
     # Deploy Qt for test executables
-    foreach(test_target
-        test_serializer test_ack_manager test_negotiation test_integration_scenarios
-        test_tcp_reliable test_pub2sub_reliable test_discovery_cycle test_qos_failure
-        test_throughput_udp test_latency_reliable test_discovery_rx test_discovery_tx)
-      if(TARGET ${test_target})
-        add_custom_command(TARGET ${test_target} POST_BUILD
-          COMMAND "${WINDEPLOYQT_EXE}" "$<TARGET_FILE:${test_target}>"
-                  --debug --compiler-runtime --network --no-translations
-                  --dir "${DEPLOY_DIR}"
-          COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:${test_target}>" "${DEPLOY_DIR}/"
-          COMMENT "Deploying Qt runtime for ${test_target}.exe"
-        )
-      endif()
-    endforeach()
+      foreach(test_target
+          test_serializer test_ack_manager test_negotiation test_integration_scenarios
+          test_tcp_reliable test_pub2sub_reliable test_discovery_cycle test_qos_failure
+          test_throughput_udp test_latency_reliable test_discovery_rx test_discovery_tx)
+        if(TARGET ${test_target})
+          # Always copy the exe to qt_deploy
+          add_custom_command(TARGET ${test_target} POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:${test_target}>" "${DEPLOY_DIR}/"
+            COMMENT "Copying ${test_target}.exe to qt_deploy"
+          )
+          # Deploy Qt if windeployqt is available
+          if(WINDEPLOYQT_EXE)
+            add_custom_command(TARGET ${test_target} POST_BUILD
+              COMMAND "${WINDEPLOYQT_EXE}" "$<TARGET_FILE:${test_target}>"
+                      --debug --compiler-runtime --network --no-translations
+                      --dir "${DEPLOY_DIR}"
+              COMMENT "Deploying Qt runtime for ${test_target}.exe"
+            )
+          endif()
+        endif()
+      endforeach()
   else()
     message(WARNING "windeployqt not found - Qt runtime will not be deployed automatically")
   endif()

@@ -11,6 +11,6 @@
 
   // --- PlantUML (رندر محلی) ---
   "plantuml.render": "Local",
-  
-  "plantuml.graphvizDot": "C:\\\\Program Files\\\\Graphviz\\\\bin\\\\dot.exe"
+  "plantuml.java": "C:/Program Files/Eclipse Adoptium/jdk-17.0.16.8-hotspot/bin/java.exe",
+  "plantuml.graphvizDot": "C:/Program Files/Graphviz/bin/dot.exe"
 }

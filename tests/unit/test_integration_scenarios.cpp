@@ -196,7 +196,9 @@ private slots:
         // On Windows/MinGW, UDP broadcast doesn't loop back in single-process.
         // Use unicast pairing instead: two in-process nodes communicating via localhost.
 
-        UdpTransport* transportSub = new UdpTransport(38024, this);
+        qputenv("DDS_TEST_LOOPBACK", "1");
+
+        UdpTransport* transportSub = new UdpTransport(0, this); // ephemeral port
         UdpTransport* transportPub = new UdpTransport(38025, this);
         AckManager* ackMgr = new AckManager(this);
 
@@ -215,10 +217,11 @@ private slots:
             messagesReceived++;
         });
 
-        // Inject unicast peer: corePub -> coreSub on localhost:38024
+        // Inject unicast peer: corePub -> coreSub on localhost:subPort
+        quint16 subPort = transportSub->boundPort();
         QJsonObject peer;
         peer["node_id"] = "perf-sub";
-        peer["data_port"] = 38024;
+        peer["data_port"] = subPort;
         peer["topics"] = QJsonArray{"perf/topic"};
         corePub.updatePeers("perf-sub", peer);
 
@@ -237,7 +240,9 @@ private slots:
         }
 
         // Wait for all messages to be processed
-        QTest::qWait(200);
+        QTRY_COMPARE_WITH_TIMEOUT(messagesReceived > 0, true, 1500);
+
+        qInfo() << "Sent" << NUM_MESSAGES << "messages, received" << messagesReceived;
 
         delete transportSub;
         delete transportPub;
