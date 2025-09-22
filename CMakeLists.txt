@@ -378,7 +378,13 @@ if (WIN32)
       COMMENT "Deploying Qt runtime for dds_mini_bus.exe"
     )
 
-    # Test executables use Qt DLLs from qt_deploy via PATH, no per-test deploy needed
+    # Copy essential Qt DLLs for tests to qt_deploy
+    add_custom_target(deploy_qt_dlls_for_tests ALL
+      COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:Qt6::Core>" "${DEPLOY_DIR}/"
+      COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:Qt6::Network>" "${DEPLOY_DIR}/"
+      COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:Qt6::Test>" "${DEPLOY_DIR}/"
+      COMMENT "Copying Qt DLLs for tests to qt_deploy"
+    )
   else()
     message(WARNING "windeployqt not found - Qt runtime will not be deployed automatically")
   endif()
