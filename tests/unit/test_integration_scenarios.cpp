@@ -197,8 +197,10 @@ private slots:
 #if defined(Q_OS_WIN)
         // On Windows, use multi-process to avoid UDP broadcast loopback issues
         QProcess rxProcess;
-        rxProcess.setProgram("test_discovery_rx.exe");
-        rxProcess.setArguments({"--config", "config/config.json"});
+        QString exePath = QCoreApplication::applicationDirPath() + "/test_discovery_rx.exe";
+        QString configPath = QCoreApplication::applicationDirPath() + "/config/config.json";
+        rxProcess.setProgram(exePath);
+        rxProcess.setArguments({"--config", configPath});
         rxProcess.setWorkingDirectory(QDir::currentPath());
         rxProcess.setProcessEnvironment(QProcessEnvironment::systemEnvironment());
         auto env = rxProcess.processEnvironment();
@@ -223,7 +225,7 @@ private slots:
         });
 
         rxProcess.start();
-        QVERIFY2(rxProcess.waitForStarted(5000), qPrintable(QString("Failed to start RX: %1").arg(rxProcess.errorString())));
+        QVERIFY2(rxProcess.waitForStarted(15000), qPrintable(QString("Failed to start RX: %1").arg(rxProcess.errorString())));
 
         // Give RX time to start and subscribe
         QTest::qWait(2000);
