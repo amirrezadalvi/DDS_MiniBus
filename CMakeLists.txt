@@ -280,9 +280,9 @@ function(dds_add_test NAME)
   add_test(NAME ${NAME}
     COMMAND $<TARGET_FILE:${NAME}> ${ARGN}
   )
-  # Run from qt_deploy so Qt DLLs + config are right there
+  # Run from build dir so exe is there; qt_deploy is in PATH for DLLs
   set_tests_properties(${NAME} PROPERTIES
-    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}/qt_deploy"
+    WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
   )
   # Prepend qt_deploy to PATH (so DLLs resolve)
   set_property(TEST ${NAME} APPEND PROPERTY ENVIRONMENT
