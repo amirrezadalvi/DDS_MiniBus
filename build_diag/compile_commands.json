@@ -1,0 +1,332 @@
+[
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\mini_dds_lib_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\mini_dds_lib_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/mini_dds_lib_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/mini_dds_lib_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\utils\\log_setup.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\log_setup.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/log_setup.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/utils/log_setup.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\utils\\logger.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\logger.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/logger.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/utils/logger.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\config\\config_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\config\\config_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/config/config_manager.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/config/config_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\serialization\\serializer.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\serialization\\serializer.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/serialization/serializer.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/serialization/serializer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\core\\dds_core.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\core\\dds_core.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/core/dds_core.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/core/dds_core.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\core\\publisher.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\core\\publisher.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/core/publisher.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/core/publisher.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\core\\subscriber.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\core\\subscriber.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/core/subscriber.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/core/subscriber.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\transport\\transport_base.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\transport_base.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/transport_base.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/transport/transport_base.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\transport\\udp_transport.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\udp_transport.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/udp_transport.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/transport/udp_transport.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\transport\\tcp_transport.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\tcp_transport.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/tcp_transport.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/transport/tcp_transport.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\transport\\ack_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\ack_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/ack_manager.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/transport/ack_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\discovery\\discovery_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\discovery\\discovery_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/discovery/discovery_manager.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/discovery/discovery_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/mini_dds_lib.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\mini_dds_lib.dir\\utils\\cli.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\cli.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/cli.cpp",
+  "output": "CMakeFiles/mini_dds_lib.dir/utils/cli.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\dds_mini_bus_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\dds_mini_bus_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/dds_mini_bus_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/dds_mini_bus_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\main.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\main.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/main.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\utils\\log_setup.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\log_setup.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/log_setup.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/utils/log_setup.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\utils\\logger.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\logger.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/logger.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/utils/logger.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\config\\config_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\config\\config_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/config/config_manager.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/config/config_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\serialization\\serializer.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\serialization\\serializer.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/serialization/serializer.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/serialization/serializer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\core\\dds_core.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\core\\dds_core.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/core/dds_core.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/core/dds_core.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\core\\publisher.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\core\\publisher.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/core/publisher.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/core/publisher.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\core\\subscriber.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\core\\subscriber.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/core/subscriber.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/core/subscriber.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\transport\\transport_base.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\transport_base.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/transport_base.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/transport/transport_base.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\transport\\udp_transport.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\udp_transport.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/udp_transport.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/transport/udp_transport.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\transport\\tcp_transport.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\tcp_transport.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/tcp_transport.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/transport/tcp_transport.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\transport\\ack_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\transport\\ack_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/transport/ack_manager.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/transport/ack_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/dds_mini_bus.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\dds_mini_bus.dir\\discovery\\discovery_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\discovery\\discovery_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/discovery/discovery_manager.cpp",
+  "output": "CMakeFiles/dds_mini_bus.dir/discovery/discovery_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_discovery_rx.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_discovery_rx.dir\\tests\\test_discovery_receiver.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\test_discovery_receiver.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/test_discovery_receiver.cpp",
+  "output": "CMakeFiles/test_discovery_rx.dir/tests/test_discovery_receiver.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_discovery_tx.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_discovery_tx.dir\\tests\\test_discovery_sender.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\test_discovery_sender.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/test_discovery_sender.cpp",
+  "output": "CMakeFiles/test_discovery_tx.dir/tests/test_discovery_sender.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_serializer.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_serializer.dir\\test_serializer_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_serializer_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_serializer_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_serializer.dir/test_serializer_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_serializer.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_serializer.dir\\tests\\unit\\test_serializer.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\unit\\test_serializer.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/unit/test_serializer.cpp",
+  "output": "CMakeFiles/test_serializer.dir/tests/unit/test_serializer.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_ack_manager.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_ack_manager.dir\\test_ack_manager_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_ack_manager_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_ack_manager_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_ack_manager.dir/test_ack_manager_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_ack_manager.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_ack_manager.dir\\tests\\unit\\test_ack_manager.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\unit\\test_ack_manager.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/unit/test_ack_manager.cpp",
+  "output": "CMakeFiles/test_ack_manager.dir/tests/unit/test_ack_manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_negotiation.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_negotiation.dir\\test_negotiation_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_negotiation_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_negotiation_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_negotiation.dir/test_negotiation_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_negotiation.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_negotiation.dir\\tests\\unit\\test_negotiation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\unit\\test_negotiation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/unit/test_negotiation.cpp",
+  "output": "CMakeFiles/test_negotiation.dir/tests/unit/test_negotiation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_integration_scenarios.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_integration_scenarios.dir\\test_integration_scenarios_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_integration_scenarios_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_integration_scenarios_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_integration_scenarios.dir/test_integration_scenarios_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_integration_scenarios.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_integration_scenarios.dir\\tests\\unit\\test_integration_scenarios.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\unit\\test_integration_scenarios.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/unit/test_integration_scenarios.cpp",
+  "output": "CMakeFiles/test_integration_scenarios.dir/tests/unit/test_integration_scenarios.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_tcp_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_tcp_reliable.dir\\tests\\test_tcp_reliable.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\test_tcp_reliable.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/test_tcp_reliable.cpp",
+  "output": "CMakeFiles/test_tcp_reliable.dir/tests/test_tcp_reliable.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_pub2sub_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_pub2sub_reliable.dir\\test_pub2sub_reliable_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_pub2sub_reliable_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_pub2sub_reliable_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_pub2sub_reliable.dir/test_pub2sub_reliable_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_pub2sub_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_pub2sub_reliable.dir\\tests\\integration\\test_pub2sub_reliable.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\integration\\test_pub2sub_reliable.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/integration/test_pub2sub_reliable.cpp",
+  "output": "CMakeFiles/test_pub2sub_reliable.dir/tests/integration/test_pub2sub_reliable.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_pub2sub_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_pub2sub_reliable.dir\\tests\\common\\test_utils.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\common\\test_utils.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/common/test_utils.cpp",
+  "output": "CMakeFiles/test_pub2sub_reliable.dir/tests/common/test_utils.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_pub2sub_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_pub2sub_reliable.dir\\utils\\cli.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\cli.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/cli.cpp",
+  "output": "CMakeFiles/test_pub2sub_reliable.dir/utils/cli.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_discovery_cycle.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_discovery_cycle.dir\\test_discovery_cycle_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_discovery_cycle_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_discovery_cycle_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_discovery_cycle.dir/test_discovery_cycle_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_discovery_cycle.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_discovery_cycle.dir\\tests\\integration\\test_discovery_cycle.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\integration\\test_discovery_cycle.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/integration/test_discovery_cycle.cpp",
+  "output": "CMakeFiles/test_discovery_cycle.dir/tests/integration/test_discovery_cycle.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_discovery_cycle.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_discovery_cycle.dir\\tests\\common\\test_utils.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\common\\test_utils.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/common/test_utils.cpp",
+  "output": "CMakeFiles/test_discovery_cycle.dir/tests/common/test_utils.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_discovery_cycle.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_discovery_cycle.dir\\utils\\cli.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\cli.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/cli.cpp",
+  "output": "CMakeFiles/test_discovery_cycle.dir/utils/cli.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_qos_failure.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_qos_failure.dir\\test_qos_failure_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_qos_failure_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_qos_failure_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_qos_failure.dir/test_qos_failure_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_qos_failure.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_qos_failure.dir\\tests\\integration\\test_qos_failure.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\integration\\test_qos_failure.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/integration/test_qos_failure.cpp",
+  "output": "CMakeFiles/test_qos_failure.dir/tests/integration/test_qos_failure.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_qos_failure.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_qos_failure.dir\\tests\\common\\test_utils.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\common\\test_utils.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/common/test_utils.cpp",
+  "output": "CMakeFiles/test_qos_failure.dir/tests/common/test_utils.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DTEST_APP_NAME=\\\"dds_mini_bus.exe\\\" -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_qos_failure.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_qos_failure.dir\\utils\\cli.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\utils\\cli.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/utils/cli.cpp",
+  "output": "CMakeFiles/test_qos_failure.dir/utils/cli.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_throughput_udp.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_throughput_udp.dir\\test_throughput_udp_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_throughput_udp_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_throughput_udp_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_throughput_udp.dir/test_throughput_udp_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_throughput_udp.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_throughput_udp.dir\\tests\\perf\\test_throughput_udp.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\perf\\test_throughput_udp.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/perf/test_throughput_udp.cpp",
+  "output": "CMakeFiles/test_throughput_udp.dir/tests/perf/test_throughput_udp.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_latency_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_latency_reliable.dir\\test_latency_reliable_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\build_diag\\test_latency_reliable_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag/test_latency_reliable_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/test_latency_reliable.dir/test_latency_reliable_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1/build_diag\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/Nova/Desktop/DDS-MiniBus-1\\\" -DQT_TESTLIB_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/test_latency_reliable.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\test_latency_reliable.dir\\tests\\perf\\test_latency_reliable.cpp.obj -c C:\\Users\\Nova\\Desktop\\DDS-MiniBus-1\\tests\\perf\\test_latency_reliable.cpp",
+  "file": "C:/Users/Nova/Desktop/DDS-MiniBus-1/tests/perf/test_latency_reliable.cpp",
+  "output": "CMakeFiles/test_latency_reliable.dir/tests/perf/test_latency_reliable.cpp.obj"
+}
+]

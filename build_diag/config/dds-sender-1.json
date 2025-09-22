@@ -1,0 +1,51 @@
+{
+  "node_id": "dds-sender-1",
+  "protocol_version": "1.0",
+  "discovery": {
+    "enabled": true,
+    "mode": "multicast",
+    "address": "239.255.0.1",
+    "port": 39001,
+    "interval_ms": 1000,
+    "ttl": 1
+  },
+  "transport": {
+    "default": "udp",
+    "udp": {
+      "port": 39010,
+      "rcvbuf": 262144,
+      "sndbuf": 262144
+    },
+    "tcp": {
+      "listen": false,
+      "port": 39020,
+      "rcvbuf": 262144,
+      "sndbuf": 262144,
+      "connect_timeout_ms": 1500,
+      "heartbeat_ms": 0,
+      "reconnect_backoff_ms": 500,
+      "max_reconnect_attempts": 10
+    }
+  },
+  "qos": {
+    "default": "reliable",
+    "reliable": {
+      "ack_timeout_ms": 120,
+      "max_retries": 2,
+      "exponential_backoff": true
+    },
+    "dedup_capacity": 2048,
+    "retain_last": true
+  },
+  "topics": ["sensor/temperature"],
+  "logging": {
+    "level": "debug",
+    "file": "logs/dds.log",
+    "deadletter_file": "logs/dds_deadletter.ndjson"
+  },
+  "serialization": {
+    "format": "json",
+    "supported": ["json", "cbor"],
+    "allow_json_fallback": true
+  }
+}

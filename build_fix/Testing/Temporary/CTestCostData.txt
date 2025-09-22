@@ -1,0 +1,14 @@
+test_integration_scenarios 0 0
+test_serializer 1 0.0615306
+test_ack_manager 1 1.12316
+test_negotiation 1 0.0663669
+test_tcp_reliable 1 3.09211
+test_throughput_udp 1 2.9436
+test_latency_reliable 1 50.0812
+test_pub2sub_reliable 1 0.0544708
+test_discovery_cycle 1 0.0521233
+test_qos_failure 1 0.0510062
+test_discovery_rx 1 10.0758
+test_discovery_tx 1 10.0768
+---
+test_integration_scenarios
