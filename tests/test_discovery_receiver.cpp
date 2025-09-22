@@ -75,5 +75,10 @@ int main(int argc, char** argv) {
         qInfo() << "[TEST][RX] temperature:" << pl;
     });
 
+    // Test-only subscriber for perf/topic (used by test_integration_scenarios)
+    core.makeSubscriber("perf/topic", [](const QJsonObject& pl){
+        qInfo() << "[TEST][RX] perf/topic:" << pl;
+    });
+
     return app.exec();
 }
