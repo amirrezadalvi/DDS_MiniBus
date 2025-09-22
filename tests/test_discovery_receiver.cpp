@@ -31,8 +31,8 @@ int main(int argc, char** argv) {
     auto& cfg = ConfigManager::ref();
     LogSetup::init(cfg.logging.level, cfg.logging.file);
 
-    // --- Transport: UDP با پورت پویا برای جلوگیری از تداخل
-    auto* udp = new UdpTransport(/*data port*/ 0, &app);
+    // --- Transport: UDP fixed port for test
+    auto* udp = new UdpTransport(39010, &app);
     ITransport* t = udp;
     qInfo() << "[BOOT][RX] dataPort=" << t->boundPort();
 
@@ -40,32 +40,7 @@ int main(int argc, char** argv) {
     AckManager ack;
     DDSCore core(cfg.node_id + "-rx", cfg.protocol_version, t, &ack);
 
-    // --- Discovery از config (دقت: disc.*)
-    const int          discPort = cfg.disc.port;     // مثل 45454
-    const QString      modeStr  = cfg.disc.mode;     // "multicast" یا "broadcast"
-    const QHostAddress mcastAdr = cfg.disc.address;  // 239.255.0.1
-    qInfo() << "[DISC][RX]" << "mode=" << modeStr
-             << "grp=" << mcastAdr.toString()
-             << "discPort=" << discPort;
-
-    DiscoveryManager disc(cfg.node_id + "-rx", discPort);
-    disc.setProtocolVersion(cfg.protocol_version);
-    disc.setMode(modeStr);               // اگر امضایش enum است، این خط را طبق enum خودت تغییر بده
-    if (!mcastAdr.isNull()) {
-        disc.setMulticastAddress(mcastAdr);
-    }
-    disc.setDataPort(t->boundPort());
-    disc.setAdvertisedTopics(cfg.topics_list.isEmpty() ? QStringList{"sensor/temperature"} : cfg.topics_list);
-
-    // Enable loopback mode for testing if environment variable is set
-    bool loopbackMode = qEnvironmentVariableIntValue("DDS_TEST_LOOPBACK") == 1;
-    if (loopbackMode) {
-        disc.setLoopbackMode(true);
-        qInfo() << "test: discovery loopback mode enabled";
-    }
-
-    QObject::connect(&disc, &DiscoveryManager::peerUpdated, &core, &DDSCore::updatePeers);
-    disc.start(/*immediate*/ true);
+    // Skip discovery for test - rely on peer injection from parent
 
     // Timeout after 10 seconds to avoid hanging
     QTimer::singleShot(10000, &app, &QCoreApplication::quit);
