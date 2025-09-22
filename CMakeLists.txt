@@ -208,6 +208,14 @@ target_include_directories(test_integration_scenarios PRIVATE . include)
 # Re-enable AUTOMOC for this test as it has Q_OBJECT
 add_dependencies(test_integration_scenarios test_discovery_rx)
 
+# Copy exe to qt_deploy for running from there
+add_custom_command(TARGET test_integration_scenarios POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_BINARY_DIR}/qt_deploy"
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different
+          "$<TARGET_FILE:test_integration_scenarios>"
+          "${CMAKE_BINARY_DIR}/qt_deploy/"
+)
+
 add_executable(test_tcp_reliable
     tests/test_tcp_reliable.cpp
 )
