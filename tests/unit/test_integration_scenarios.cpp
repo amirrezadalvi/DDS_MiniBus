@@ -260,7 +260,7 @@ private slots:
                 {"data", QString("msg-%1").arg(i)},
                 {"timestamp", QDateTime::currentMSecsSinceEpoch()}
             };
-            core.publishInternal("sensor/temperature", payload, "best_effort");
+            core.publishInternal("sensor/temperature", payload, "reliable");
             QTest::qWait(1); // Small delay between messages
         }
 
