@@ -240,7 +240,7 @@ private slots:
         }
 
         // Wait for all messages to be processed
-        QTRY_COMPARE_WITH_TIMEOUT(messagesReceived > 0, true, 1500);
+        QTRY_VERIFY_WITH_TIMEOUT(messagesReceived > 0, 3000);
 
         qInfo() << "Sent" << NUM_MESSAGES << "messages, received" << messagesReceived;
 

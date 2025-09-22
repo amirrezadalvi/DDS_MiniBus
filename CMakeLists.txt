@@ -310,6 +310,8 @@ dds_add_test(test_tcp_reliable)
 dds_add_test(test_throughput_udp)
 dds_add_test(test_latency_reliable)
 
+dds_set_loopback_env(test_integration_scenarios)
+
 # Integration-like tests that need a config:
 # Note: QtTest-based tests (pub2sub, discovery_cycle, qos_failure) don't take --config args directly
 # They spawn dds_mini_bus.exe processes and pass config args to those
